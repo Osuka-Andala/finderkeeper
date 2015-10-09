@@ -1,5 +1,6 @@
 package com.osukaandalafinderkeeper.finderkeeper;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             Toast.makeText(this,"Waddup, I am "+item.getTitle(),Toast.LENGTH_SHORT).show();
             return true;
+        }
+
+        if (id == R.id.navigate){
+            startActivity(new Intent(this, SubActivity.class));
         }
 
         return super.onOptionsItemSelected(item);

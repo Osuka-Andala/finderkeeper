@@ -12,5 +12,6 @@
     <item android:id="@+id/navigate"
         android:title="@string/next"
         android:orderInCategory="200"
+        android:icon="@drawable/favicon"
         app:showAsAction="always"/>
 </menu>
