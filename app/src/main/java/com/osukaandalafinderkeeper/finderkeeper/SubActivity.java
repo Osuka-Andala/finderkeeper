@@ -38,7 +38,7 @@ public class SubActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
- 
+
         if (id == android.R.id.home){
             NavUtils.navigateUpFromSameTask(this);
         }
