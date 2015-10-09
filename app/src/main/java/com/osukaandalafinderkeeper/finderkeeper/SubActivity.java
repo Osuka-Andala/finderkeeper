@@ -14,6 +14,9 @@ public class SubActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sub);
         Toolbar toolbar= (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
