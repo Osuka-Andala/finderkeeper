@@ -10,5 +10,7 @@
           app:showAsAction="never" />
 
     <item android:id="@+id/navigate"
-        android:title="@string/next"/>
+        android:title="@string/next"
+        android:orderInCategory="200"
+        app:showAsAction="always"/>
 </menu>
