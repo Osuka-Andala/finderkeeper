@@ -21,6 +21,8 @@ public class NavigationDrawerFragment extends Fragment {
 
     public static final String PREF_FILE_NAME = "testpref";
 
+    public static final String KEY_USER_LEARNED_DRAWER="user_learned_drawer";
+
     private ActionBarDrawerToggle mDrawerToggle;
 
     private DrawerLayout mDrawerLayout;
@@ -33,6 +35,12 @@ public class NavigationDrawerFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
