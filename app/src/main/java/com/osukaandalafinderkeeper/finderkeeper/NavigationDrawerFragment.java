@@ -4,6 +4,8 @@ package com.osukaandalafinderkeeper.finderkeeper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,13 @@ import android.view.ViewGroup;
  */
 public class NavigationDrawerFragment extends Fragment {
 
+    private ActionBarDrawerToggle mDrawerToggle;
+
+    private DrawerLayout mDrawerLayout;
+
+    private boolean mUserLearneddrawer;
+
+    private boolean mFromSavedInstanceState;
 
     public NavigationDrawerFragment() {
         // Required empty public constructor
@@ -29,6 +38,18 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
 
-    public void setUp(DrawerLayout drawerlayout, Toolbar toolbar) {
-    }
+     public void setUp(DrawerLayout drawerlayout, Toolbar toolbar) {
+         mDrawerLayout=drawerlayout;
+        mDrawerToggle=new ActionBarDrawerToggle(getActivity(),drawerlayout,toolbar,R.string.drawer_open,R.string.drawer_closed){
+            @Override
+            public void onDrawerOpened(View drawerView){
+                super.onDrawerOpened(drawerView);
+            }
+            @Override
+            public void onDrawerClosed(View drawerView){
+                super.onDrawerClosed(drawerView);
+            }
+        };
+         mDrawerLayout.setDrawerListener(mDrawerToggle);
+     }
 }
