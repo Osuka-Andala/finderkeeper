@@ -57,11 +57,17 @@ public class NavigationDrawerFragment extends Fragment {
 
         mDrawerLayout = drawerlayout;
 
-        mDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerlayout, toolbar, R.string.drawer_open, R.string.drawer_closed) {
+        mDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerlayout, toolbar, "Open", "Close") {
 
             @Override
             public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
+                if (!mUserLearneddrawer) {
+                    mUserLearneddrawer = true;
+                    saveToPreferences(getActivity(), KEY_USER_LEARNED_DRAWER, mUserLearneddrawer + "");
+                }
+
+                getActivity().invalidateOptionsMenu();
+
             }
 
             @Override
