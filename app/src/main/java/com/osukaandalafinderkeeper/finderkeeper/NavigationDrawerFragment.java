@@ -40,6 +40,9 @@ public class NavigationDrawerFragment extends Fragment {
         super.onCreate(savedInstanceState);
         mUserLearneddrawer=Boolean.valueOf(readFromPreferences(getActivity(),KEY_USER_LEARNED_DRAWER,"false"));
 
+        if (savedInstanceState!=null){
+            mFromSavedInstanceState=true;
+        }
     }
 
     @Override
