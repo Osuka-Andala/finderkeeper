@@ -1,6 +1,8 @@
 package com.osukaandalafinderkeeper.finderkeeper;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +18,8 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  */
 public class NavigationDrawerFragment extends Fragment {
+
+    public static final String PREF_FILE_NAME="testpref";
 
     private ActionBarDrawerToggle mDrawerToggle;
 
@@ -39,17 +43,30 @@ public class NavigationDrawerFragment extends Fragment {
 
 
      public void setUp(DrawerLayout drawerlayout, Toolbar toolbar) {
+
          mDrawerLayout=drawerlayout;
-        mDrawerToggle=new ActionBarDrawerToggle(getActivity(),drawerlayout,toolbar,R.string.drawer_open,R.string.drawer_closed){
+
+         mDrawerToggle=new ActionBarDrawerToggle(getActivity(),drawerlayout,toolbar,R.string.drawer_open,R.string.drawer_closed){
+
             @Override
             public void onDrawerOpened(View drawerView){
                 super.onDrawerOpened(drawerView);
             }
+
             @Override
             public void onDrawerClosed(View drawerView){
                 super.onDrawerClosed(drawerView);
             }
         };
+
          mDrawerLayout.setDrawerListener(mDrawerToggle);
      }
+
+    public void saveToPreferences(Context context, String preferenceName, String preferenceValue){
+        SharedPreferences sharedPreferences=context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString(preferenceName, preferenceValue);
+        editor.commit();
+
+    }
 }
