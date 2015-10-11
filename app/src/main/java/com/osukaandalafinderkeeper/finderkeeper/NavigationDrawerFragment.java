@@ -19,7 +19,7 @@ import android.view.ViewGroup;
  */
 public class NavigationDrawerFragment extends Fragment {
 
-    public static final String PREF_FILE_NAME="testpref";
+    public static final String PREF_FILE_NAME = "testpref";
 
     private ActionBarDrawerToggle mDrawerToggle;
 
@@ -42,30 +42,36 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
 
-     public void setUp(DrawerLayout drawerlayout, Toolbar toolbar) {
+    public void setUp(DrawerLayout drawerlayout, Toolbar toolbar) {
 
-         mDrawerLayout=drawerlayout;
+        mDrawerLayout = drawerlayout;
 
-         mDrawerToggle=new ActionBarDrawerToggle(getActivity(),drawerlayout,toolbar,R.string.drawer_open,R.string.drawer_closed){
+        mDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerlayout, toolbar, R.string.drawer_open, R.string.drawer_closed) {
 
             @Override
-            public void onDrawerOpened(View drawerView){
+            public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
             }
 
             @Override
-            public void onDrawerClosed(View drawerView){
+            public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
             }
         };
 
-         mDrawerLayout.setDrawerListener(mDrawerToggle);
-     }
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
+    }
 
-    public void saveToPreferences(Context context, String preferenceName, String preferenceValue){
-        SharedPreferences sharedPreferences=context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor=sharedPreferences.edit();
+    public static void saveToPreferences(Context context, String preferenceName, String preferenceValue) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(preferenceName, preferenceValue);
         editor.apply();
     }
+
+    public static  String readFromPreferences(Context context, String preferenceName, String defaultValue) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(preferenceName, defaultValue);
+    }
+
 }
