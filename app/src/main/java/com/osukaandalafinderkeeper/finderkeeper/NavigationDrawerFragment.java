@@ -66,7 +66,6 @@ public class NavigationDrawerFragment extends Fragment {
         SharedPreferences sharedPreferences=context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString(preferenceName, preferenceValue);
-        editor.commit();
-
+        editor.apply();
     }
 }
