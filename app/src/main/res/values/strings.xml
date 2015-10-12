@@ -45,6 +45,7 @@
     <string name="title_activity_news_room">NewsRoom</string>
     <string name="title_activity_rate">Rate</string>
     <string name="title_activity_logout">Logout</string>
+    <string name="title_activity_how_is_traffic">HowIsTraffic</string>
 
 
 </resources>

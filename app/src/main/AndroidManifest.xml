@@ -52,6 +52,10 @@
             android:name=".Logout"
             android:label="@string/title_activity_logout" >
         </activity>
+        <activity
+            android:name=".HowIsTraffic"
+            android:label="@string/title_activity_how_is_traffic" >
+        </activity>
     </application>
 
 </manifest>
