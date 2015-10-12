@@ -44,6 +44,7 @@
     <string name="title_activity_scheduled_rides">ScheduledRides</string>
     <string name="title_activity_news_room">NewsRoom</string>
     <string name="title_activity_rate">Rate</string>
+    <string name="title_activity_logout">Logout</string>
 
 
 </resources>

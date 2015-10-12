@@ -48,6 +48,10 @@
             android:name=".Rate"
             android:label="@string/title_activity_rate" >
         </activity>
+        <activity
+            android:name=".Logout"
+            android:label="@string/title_activity_logout" >
+        </activity>
     </application>
 
 </manifest>
