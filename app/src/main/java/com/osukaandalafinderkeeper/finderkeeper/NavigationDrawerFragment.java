@@ -27,9 +27,11 @@ public class NavigationDrawerFragment extends Fragment {
 
     private DrawerLayout mDrawerLayout;
 
-    private boolean mUserLearneddrawer;
+    private boolean mUserLearnedDrawer;
 
     private boolean mFromSavedInstanceState;
+
+    private View containerView;
 
     public NavigationDrawerFragment() {
         // Required empty public constructor
@@ -38,7 +40,7 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mUserLearneddrawer=Boolean.valueOf(readFromPreferences(getActivity(),KEY_USER_LEARNED_DRAWER,"false"));
+        mUserLearnedDrawer=Boolean.valueOf(readFromPreferences(getActivity(),KEY_USER_LEARNED_DRAWER,"false"));
 
         if (savedInstanceState!=null){
             mFromSavedInstanceState=true;
@@ -53,17 +55,19 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
 
-    public void setUp(DrawerLayout drawerlayout, Toolbar toolbar) {
+    public void setUp(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {
+        containerView=getActivity().findViewById(fragmentId);
 
-        mDrawerLayout = drawerlayout;
+        mDrawerLayout = drawerLayout;
 
-        mDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerlayout, toolbar, "Open", "Close") {
+        mDrawerToggle = new ActionBarDrawerToggle(getActivity(),drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
 
             @Override
             public void onDrawerOpened(View drawerView) {
-                if (!mUserLearneddrawer) {
-                    mUserLearneddrawer = true;
-                    saveToPreferences(getActivity(), KEY_USER_LEARNED_DRAWER, mUserLearneddrawer + "");
+                super.onDrawerOpened(drawerView);
+                if (!mUserLearnedDrawer) {
+                    mUserLearnedDrawer = true;
+                    saveToPreferences(getActivity(), KEY_USER_LEARNED_DRAWER, mUserLearnedDrawer + "");
                 }
 
                 getActivity().invalidateOptionsMenu();
@@ -73,8 +77,13 @@ public class NavigationDrawerFragment extends Fragment {
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
+                getActivity().invalidateOptionsMenu();
             }
         };
+
+        if (!mUserLearnedDrawer && !mFromSavedInstanceState){
+            mDrawerLayout.openDrawer();
+        }
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
