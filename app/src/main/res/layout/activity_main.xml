@@ -32,6 +32,15 @@
         android:name="com.osukaandalafinderkeeper.finderkeeper.NavigationDrawerFragment"
         tools:layout="@layout/fragment_navigation_drawer" />
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:background="#FFFFFF"
+        android:layout_gravity="left"
+        />
+
 
 </android.support.v4.widget.DrawerLayout>
 
