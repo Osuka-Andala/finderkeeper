@@ -36,6 +36,10 @@
             android:name=".Profile"
             android:label="@string/title_activity_profile" >
         </activity>
+        <activity
+            android:name=".ScheduledRides"
+            android:label="@string/title_activity_scheduled_rides" >
+        </activity>
     </application>
 
 </manifest>
