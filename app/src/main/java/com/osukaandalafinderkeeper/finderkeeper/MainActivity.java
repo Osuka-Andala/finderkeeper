@@ -1,11 +1,15 @@
 package com.osukaandalafinderkeeper.finderkeeper;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +20,12 @@ import static com.osukaandalafinderkeeper.finderkeeper.R.id.fragment_navigation_
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    DrawerLayout drawerLayout;
+    RecyclerView recyclerView;
+    String navTiles[];
+    TypedArray navIcons;
+    RecyclerView.Adapter recyclerViewAdapter;
+    ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+//        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+//
+//        navTiles = getResources().getStringArray(R.array.navDrawerItems);
+//        navIcons = getResources().obtainTypedArray(R.array.navDrawerIcons);
+//
+//        recyclerViewAdapter = new RecyclerViewAdapter(navTiles, navIcons, this);
+//        recyclerView.setAdapter(recyclerViewAdapter);
+//
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);

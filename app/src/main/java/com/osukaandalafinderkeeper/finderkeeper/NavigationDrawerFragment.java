@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 
 /**
@@ -33,6 +34,8 @@ public class NavigationDrawerFragment extends Fragment {
 
     private View containerView;
 
+    private ListView listView;
+
     public NavigationDrawerFragment() {
         // Required empty public constructor
     }
@@ -51,8 +54,14 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        int[] images = {R.drawable.profile,R.drawable.srides,R.drawable.newsroom,R.drawable.howistraffic,R.drawable.rate,R.drawable.help,R.drawable.settings,R.drawable.logout };
+        View v = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        listView = (ListView) v.findViewById(R.id.navdrawer);
+        listView.setAdapter(new NewRecyclerViewAdapter(getActivity(), 0, getActivity().getResources().getStringArray(R.array.navDrawerItems), images));
+        return v;
     }
+
+
 
 
     public void setUp(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {
