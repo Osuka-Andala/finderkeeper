@@ -44,6 +44,10 @@
             android:name=".NewsRoom"
             android:label="@string/title_activity_news_room" >
         </activity>
+        <activity
+            android:name=".Rate"
+            android:label="@string/title_activity_rate" >
+        </activity>
     </application>
 
 </manifest>
