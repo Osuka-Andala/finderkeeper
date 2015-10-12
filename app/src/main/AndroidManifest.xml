@@ -56,6 +56,10 @@
             android:name=".HowIsTraffic"
             android:label="@string/title_activity_how_is_traffic" >
         </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
     </application>
 
 </manifest>
