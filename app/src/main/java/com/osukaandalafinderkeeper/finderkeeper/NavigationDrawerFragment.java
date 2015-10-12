@@ -82,10 +82,16 @@ public class NavigationDrawerFragment extends Fragment {
         };
 
         if (!mUserLearnedDrawer && !mFromSavedInstanceState){
-            mDrawerLayout.openDrawer();
+            mDrawerLayout.openDrawer(containerView);
         }
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                mDrawerToggle.syncState();
+            }
+        });
     }
 
     public static void saveToPreferences(Context context, String preferenceName, String preferenceValue) {
