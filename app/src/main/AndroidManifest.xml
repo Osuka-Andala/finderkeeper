@@ -40,6 +40,10 @@
             android:name=".ScheduledRides"
             android:label="@string/title_activity_scheduled_rides" >
         </activity>
+        <activity
+            android:name=".NewsRoom"
+            android:label="@string/title_activity_news_room" >
+        </activity>
     </application>
 
 </manifest>
