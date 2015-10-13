@@ -1,6 +1,5 @@
 package com.osukaandalafinderkeeper.finderkeeper;
 
-import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,12 +7,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class SubActivity extends AppCompatActivity {
+public class DesiredPref extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub);
+        setContentView(R.layout.activity_desired_pref);
         Toolbar toolbar= (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
@@ -24,7 +23,7 @@ public class SubActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sub, menu);
+        getMenuInflater().inflate(R.menu.menu_desired_pref, menu);
         return true;
     }
 
@@ -43,12 +42,6 @@ public class SubActivity extends AppCompatActivity {
         if (id == android.R.id.home){
             NavUtils.navigateUpFromSameTask(this);
         }
-
-        if (id == R.id.navigate){
-            startActivity(new Intent(this, DesiredPref.class));
-        }
-
-
         return super.onOptionsItemSelected(item);
     }
 }

@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.osukaandalafinderkeeper.finderkeeper.SubActivity">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <LinearLayout
+        android:layout_below="@id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:text="Desired Preferences"
+            android:id="@+id/details"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="From"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/From"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:layout_marginLeft="100dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_height="25dp"
+            android:layout_width="150dp"
+            android:id="@+id/editfrom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="To"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/editto"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:layout_marginLeft="100dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_height="25dp"
+            android:layout_width="150dp"
+            android:id="@+id/editadd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Time &amp;  Date "
+            android:layout_marginLeft="100dp"
+            android:id="@+id/timestamp"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:layout_marginLeft="100dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_height="25dp"
+            android:layout_width="150dp"
+            android:id="@+id/edittimestap" />
+
+        <Button
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save &amp; Submit"
+            android:id="@+id/save" />
+
+    </LinearLayout>
+
+</RelativeLayout>
