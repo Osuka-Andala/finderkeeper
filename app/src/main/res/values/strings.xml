@@ -30,13 +30,13 @@
         <integer-array name="navDrawerIcons">
 
             <item>@drawable/profilegreen</item>
-            <item>@drawable/srides</item>
-            <item>@drawable/newsroom</item>
-            <item>@drawable/howistraffic</item>
-            <item>@drawable/rate</item>
-            <item>@drawable/help</item>
-            <item>@drawable/settings</item>
-            <item>@drawable/logout</item>
+            <item>@drawable/sridesgreen</item>
+            <item>@drawable/newsroomgreen</item>
+            <item>@drawable/howistrfcgreen</item>
+            <item>@drawable/rategreen</item>
+            <item>@drawable/helpgreen</item>
+            <item>@drawable/settingsgreen</item>
+            <item>@drawable/logoutgreen</item>
 
 
         </integer-array>

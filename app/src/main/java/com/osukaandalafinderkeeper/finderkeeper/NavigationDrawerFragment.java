@@ -54,7 +54,7 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        int[] images = {R.drawable.profilegreen,R.drawable.srides,R.drawable.newsroom,R.drawable.howistraffic,R.drawable.rate,R.drawable.help,R.drawable.settings,R.drawable.logout };
+        int[] images = {R.drawable.profilegreen,R.drawable.sridesgreen,R.drawable.newsroomgreen,R.drawable.howistrfcgreen,R.drawable.rategreen,R.drawable.helpgreen,R.drawable.settingsgreen,R.drawable.logoutgreen };
         View v = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         listView = (ListView) v.findViewById(R.id.navdrawer);
         listView.setAdapter(new NewRecyclerViewAdapter(getActivity(), 0, getActivity().getResources().getStringArray(R.array.navDrawerItems), images));
