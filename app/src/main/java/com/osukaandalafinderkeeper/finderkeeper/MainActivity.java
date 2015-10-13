@@ -15,9 +15,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.digits.sdk.android.Digits;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterCore;
+
+import io.fabric.sdk.android.Fabric;
+
 import static com.osukaandalafinderkeeper.finderkeeper.R.id.fragment_navigation_drawer;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TWITTER_KEY = "aWTgFr1LMVkmQuyn7JLWy3iah";
+    private static final String TWITTER_SECRET = "L4tU1EQElRYj0WITFAngsFWAT9GUm1nW7IaAD1RPzcUUgoyMdv";
+
 
     private Toolbar toolbar;
     DrawerLayout drawerLayout;
@@ -30,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new TwitterCore(authConfig), new Digits());
         setContentView(R.layout.activity_main);
 
         toolbar= (Toolbar) findViewById(R.id.app_bar);

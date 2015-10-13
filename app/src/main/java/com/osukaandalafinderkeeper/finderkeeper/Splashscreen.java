@@ -13,15 +13,11 @@ import io.fabric.sdk.android.Fabric;
 public class Splashscreen extends AppCompatActivity {
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
-    private static final String TWITTER_KEY = "aWTgFr1LMVkmQuyn7JLWy3iah";
-    private static final String TWITTER_SECRET = "L4tU1EQElRYj0WITFAngsFWAT9GUm1nW7IaAD1RPzcUUgoyMdv";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new TwitterCore(authConfig), new Digits());
         setContentView(R.layout.activity_splashscreen);
 
         Thread splash_screen = new Thread(){
@@ -33,7 +29,7 @@ public class Splashscreen extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Verification.class));
                     finish();
                 }
             }
