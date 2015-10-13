@@ -29,7 +29,7 @@
 
         <integer-array name="navDrawerIcons">
 
-            <item>@drawable/profile</item>
+            <item>@drawable/profilegreen</item>
             <item>@drawable/srides</item>
             <item>@drawable/newsroom</item>
             <item>@drawable/howistraffic</item>
