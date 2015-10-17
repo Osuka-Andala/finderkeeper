@@ -1,14 +1,10 @@
 package com.osukaandalafinderkeeper.finderkeeper;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.digits.sdk.android.Digits;
-import com.twitter.sdk.android.core.TwitterAuthConfig;
-import com.twitter.sdk.android.core.TwitterCore;
-import io.fabric.sdk.android.Fabric;
 
 public class Splashscreen extends AppCompatActivity {
 
@@ -29,7 +25,7 @@ public class Splashscreen extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    startActivity(new Intent(getApplicationContext(), Verification.class));
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                 }
             }

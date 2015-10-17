@@ -48,10 +48,6 @@
             android:value="fce8e92a80b2b58a0aa6e8d2474b6f2cd9f1044e" />
 
         <activity
-            android:name=".Verification"
-            android:label="@string/title_activity_verification" >
-        </activity>
-        <activity
             android:name=".ScheduledRides"
             android:label="@string/title_activity_scheduled_rides" >
         </activity>
@@ -74,6 +70,10 @@
         <activity
             android:name=".Logout"
             android:label="@string/title_activity_logout" >
+        </activity>
+        <activity
+            android:name=".Verification"
+            android:label="@string/title_activity_verification" >
         </activity>
     </application>
 
