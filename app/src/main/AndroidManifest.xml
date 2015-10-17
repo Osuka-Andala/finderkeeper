@@ -39,34 +39,6 @@
             android:label="@string/title_activity_profile" >
         </activity>
         <activity
-            android:name=".ScheduledRides"
-            android:label="@string/title_activity_scheduled_rides" >
-        </activity>
-        <activity
-            android:name=".NewsRoom"
-            android:label="@string/title_activity_news_room" >
-        </activity>
-        <activity
-            android:name=".Rate"
-            android:label="@string/title_activity_rate" >
-        </activity>
-        <activity
-            android:name=".Logout"
-            android:label="@string/title_activity_logout" >
-        </activity>
-        <activity
-            android:name=".HowIsTraffic"
-            android:label="@string/title_activity_how_is_traffic" >
-        </activity>
-        <activity
-            android:name=".Settings"
-            android:label="@string/title_activity_settings" >
-        </activity>
-        <activity
-            android:name=".Help"
-            android:label="@string/title_activity_help" >
-        </activity>
-        <activity
             android:name=".DesiredPref"
             android:label="@string/title_activity_desired_pref" >
         </activity>
@@ -78,6 +50,30 @@
         <activity
             android:name=".Verification"
             android:label="@string/title_activity_verification" >
+        </activity>
+        <activity
+            android:name=".ScheduledRides"
+            android:label="@string/title_activity_scheduled_rides" >
+        </activity>
+        <activity
+            android:name=".NewsRoom"
+            android:label="@string/title_activity_news_room" >
+        </activity>
+        <activity
+            android:name=".HowIsTraffic"
+            android:label="@string/title_activity_how_is_traffic" >
+        </activity>
+        <activity
+            android:name=".Help"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".Logout"
+            android:label="@string/title_activity_logout" >
         </activity>
     </application>
 

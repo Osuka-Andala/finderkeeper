@@ -21,7 +21,6 @@
             <item>Scheduled Rides</item>
             <item>News Room</item>
             <item>How is Traffic</item>
-            <item>Rate</item>
             <item>Help</item>
             <item>Setting</item>
             <item>Logout</item>
@@ -33,7 +32,6 @@
             <item>@drawable/sridesgreen</item>
             <item>@drawable/newsroomgreen</item>
             <item>@drawable/howistrfcgreen</item>
-            <item>@drawable/rategreen</item>
             <item>@drawable/helpgreen</item>
             <item>@drawable/settingsgreen</item>
             <item>@drawable/logoutgreen</item>
@@ -43,7 +41,6 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_scheduled_rides">ScheduledRides</string>
     <string name="title_activity_news_room">NewsRoom</string>
-    <string name="title_activity_rate">Rate</string>
     <string name="title_activity_logout">Logout</string>
     <string name="title_activity_how_is_traffic">HowIsTraffic</string>
     <string name="title_activity_settings">Settings</string>

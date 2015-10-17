@@ -80,22 +80,18 @@ public class NewRecyclerViewAdapter extends ArrayAdapter<String> {
                     context.startActivity(intent);
                 }
 
-                if (position == 4) {
-                    Intent intent = new Intent(context, Rate.class);
-                    context.startActivity(intent);
-                }
 
-                if (position == 5) {
+                if (position == 4) {
                     Intent intent = new Intent(context, Help.class);
                     context.startActivity(intent);
                 }
 
-                if (position == 6) {
+                if (position == 5) {
                     Intent intent = new Intent(context, Settings.class);
                     context.startActivity(intent);
                 }
 
-                if (position == 7) {
+                if (position == 6) {
                     Intent intent = new Intent(context, Logout.class);
                     context.startActivity(intent);
                 }
