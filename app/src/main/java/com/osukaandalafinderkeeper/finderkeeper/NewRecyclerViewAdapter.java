@@ -45,7 +45,6 @@ public class NewRecyclerViewAdapter extends ArrayAdapter<String> {
     public View getView(final int position, View convertView, ViewGroup parent) {
         View row = convertView;
         AdapterViewHolder holder;
-
         if (row==null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row=inflater.inflate(R.layout.drawer_item_layout, parent,false);
